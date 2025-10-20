@@ -13,6 +13,7 @@ print ("interseçãqo :", a & b )
 #
 print ("diferença", a-b)
 
+print("------------------------")
 #########################################
  # operadores 
  #  x == y, x!=y , x>y ,x<y, x>=y, x<=y
@@ -29,7 +30,7 @@ print ("x mairo que y ",x>y)
 print (" x menor que y ",x<y)  
 print ("x menor ou igual que y",x<=y) 
 print ("x maior ou igual que y",x>=y) 
-
+print("------------------------")
 #########################################
 # Operadores aritméticos
 #########################################
@@ -43,7 +44,7 @@ print("Divisão inteira =",5 // 2)  # Divisão inteira → 2
 print("resto da divisão =",5 % 2)   # Resto da divisão → 1
 print("potencia =",5 ** 2)  # Potência → 25
 
-
+print("------------------------")
 #########################################
 # Operadores lógicos
 #########################################
@@ -54,5 +55,5 @@ p, q = True, False
 print("p and q:", p and q)  # AND lógico
 print("p or q:", p or q)    # OR lógico
 print("not p:", not p)      # NOT lógico
-
+print("------------------------")
 
