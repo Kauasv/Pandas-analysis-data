@@ -9,3 +9,5 @@ O pandas depende do NumPy, então primeiro instale-o executando:
 
 ```bash
 python -m pip install numpy
+python -m pip install pandas
+python -m ensurepip
