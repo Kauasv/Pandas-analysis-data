@@ -1,114 +1,88 @@
-#Exemplo com listas ,tuplas ,conjuntos ,operadores  
-# uma lista dé uma coleção de ordenada e mutavel
-print("------------------------")
-print ("Lista de coleçao ordenada e mutavel")
-print("------------------------")
-numeros = []
-letras = []
-mistura = []
-print("lista de numeros ", numeros )
-print("lista de letras ", letras )
-print("lista de mistura ", mistura )
+import tkinter as tk
+from tkinter import scrolledtext
 
+# Função que exibe a saída do código
+def mostrar_saida():
+    saida = """
+------------------------
+Lista de coleçao ordenada e mutavel
+------------------------
+lista de numeros  []
+lista de letras  []
+lista de mistura  []
 
-################################################################
-# add a number to the 'numeros' list and then modify it
-################################################################
-print("------------------------")
-print ("adicionando e modificando itens na lista")
-print("------------------------")
-numeros.append(4)
-numeros[0] = 99
-print("Lista alterada", numeros)
+------------------------
+adicionando e modificando itens na lista
+------------------------
+Lista alterada [99]
 
-
-
-#################################
+------------------------
 #Tuplas
-################################
-print("------------------------")
-print ("#Tuplas")
-print("------------------------")
-Tupla = ("what","who","where",)
-print ("tupla: ", Tupla) 
+------------------------
+tupla:  ('what', 'who', 'where')
 
-#################################################################
+------------------------
 #um set é uma coleção não ordenada e não permite itens duplicados
-#################################################################
-print("------------------------")
-print ("#um set é uma coleção não ordenada e não permite itens duplicados")
-print("------------------------")
-frutas = {"maça","banana","laranja","maça"}
-print ("set sem duplicatas", frutas)
-frutas.add ("banana")
-print ("set apos add :",frutas)
-#################################################################
-#----------------Fozen set --------------------------------
-#################################################################
-print("------------------------")
-print ("Fozen set")
-print("------------------------")
-conjunto = frozenset (["batata","alface","uva"])
-print ("frozenset :",conjunto)
+------------------------
+set sem duplicatas {'banana', 'laranja', 'maça'}
+set apos add : {'banana', 'laranja', 'maça'}
 
-#------------> numericos !!!!! <----------------
+------------------------
+Fozen set
+------------------------
+frozenset : frozenset({'batata', 'alface', 'uva'})
 
-############################
-#Operação entre setas 
-############################
-print("------------------------")
-print ("Operação entre setas ")
-print("------------------------")
-a = {1,2,3} 
-b = {3,4,5}
+------------------------
+Operação entre setas 
+------------------------
+uniao de a com b : {1, 2, 3, 4, 5}
+interseçãqo : {3}
+diferença {1, 2}
 
-#junção 
-print ("uniao de a com b :",a|b )
-#
-print ("interseçãqo :", a & b )
-#
-print ("diferença", a-b)
+------------------------
+operadores
+------------------------
+x= 10 y= 5
+x igualdade y False
+x diferente y  True
+x mairo que y  True
+x menor que y  False
+x menor ou igual que y False
+x maior ou igual que y True
+------------------------
+Operadores aritméticos
+------------------------
+soma = 7
+Subtração = 3
+multiplicação = 10
+divisão = 2.5
+Divisão inteira = 2
+resto da divisão = 1
+potencia = 25
+------------------------
+Operadores lógicos
+------------------------
+p and q: False
+p or q: True
+not p: False
+------------------------
+"""
+    # Limpar e inserir o texto na área
+    text_area.delete(1.0, tk.END)
+    text_area.insert(tk.END, saida)
 
-print("------------------------")
-#########################################
- # operadores 
- #  x == y, x!=y , x>y ,x<y, x>=y, x<=y
-#########################################
+# Criar janela principal
+janela = tk.Tk()
+janela.title("Saída do Código Python")
+janela.geometry("700x500")
 
-print ("operadores")
-print("------------------------")
+# Botão para mostrar a saída
+botao = tk.Button(janela, text="Mostrar Saída", command=mostrar_saida)
+botao.pack(pady=10)
 
-x,y = 10,5
-print ("x=",x ,"y=",y )
-print ("x igualdade y", x == y)  
-print ("x diferente y " ,x!=y)  
-print ("x mairo que y ",x>y)  
-print (" x menor que y ",x<y)  
-print ("x menor ou igual que y",x<=y) 
-print ("x maior ou igual que y",x>=y) 
-print("------------------------")
-#########################################
-# Operadores aritméticos
-#########################################
-print ("Operadores aritméticos")
-print("------------------------")
-print("soma =",5 + 2)   # Soma → 7
-print("Subtração =",5 - 2)   # Subtração → 3
-print("multiplicação =",2 * 5)   # Multiplicação → 10
-print("divisão =",5 / 2)   # Divisão → 2.5
-print("Divisão inteira =",5 // 2)  # Divisão inteira → 2
-print("resto da divisão =",5 % 2)   # Resto da divisão → 1
-print("potencia =",5 ** 2)  # Potência → 25
+# Caixa de texto rolável
+text_area = scrolledtext.ScrolledText(janela, wrap=tk.WORD, width=80, height=25)
+text_area.pack(padx=10, pady=10)
 
-print("------------------------")
-#########################################
-# Operadores lógicos
-#########################################
-print ("Operadores lógicos")
-print("------------------------")
-p, q = True, False
-
-print("p and q:", p and q)  # AND lógico
-print("p or q:", p or q)    # OR lógico
-print("not p:", not p)      # NOT lógico
-print("------------------------")
+# Executar a janela
+janela.mainloop()
